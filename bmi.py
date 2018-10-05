@@ -4,7 +4,7 @@ from tkinter import *
 from PIL import Image, ImageTk
 
 
-def bmi_counter(event):
+def bmi_counter(*args):
     """function print bmi"""
     try:
         height = float(height_entry.get())
@@ -31,7 +31,6 @@ height_label.configure(height=2, width=6)
 
 height_entry = Entry(top)
 height_entry.place(x=90, y=20, width=50, height=30)
-
 
 weight_label = Label(top, text="Waga")
 weight_label.place(x=20, y=60)
