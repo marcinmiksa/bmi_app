@@ -4,7 +4,7 @@ from tkinter import *
 from PIL import Image, ImageTk
 
 
-def bmi_counter():
+def bmi_counter(event):
     """function print bmi"""
     try:
         height = float(height_entry.get())
@@ -22,6 +22,8 @@ top.title("BMI")
 top.geometry("430x430")
 top.resizable(0, 0)  # no resizable
 top.configure(background="#808080")  # gray background
+
+top.bind('<Return>', bmi_counter)  # add key event
 
 height_label = Label(top, text="Wzrost")
 height_label.place(x=20, y=20)
