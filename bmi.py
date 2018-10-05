@@ -12,7 +12,7 @@ def bmi_counter(*args):
         bmi = (weight / height ** 2) * 100 * 100
         bmi = round(bmi, 2)
         result = bmi_result.configure(text=bmi), results_list.insert(1, bmi)
-    except ValueError:
+    except(ValueError, ZeroDivisionError):
         return None
     return result
 
